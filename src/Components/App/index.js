@@ -2,14 +2,14 @@ import AddTaskForm from "../AddTaskForm";
 import TaskList from "../TaskList";
 import { AppContainer, AppHeader, HeaderTitle } from "./styles";
 
-const  App = ()  => {
+const App = () => {
   return (
     <AppContainer>
-      <AppHeader>
-        <HeaderTitle>Todo List App</HeaderTitle>
-      </AppHeader>
-      <AddTaskForm/>
-      <TaskList/>
+        <AppHeader>
+            <HeaderTitle>Todo List App</HeaderTitle>
+        </AppHeader>
+        <AddTaskForm/>
+        <TaskList/>
     </AppContainer>
   );
 }
