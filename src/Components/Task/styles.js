@@ -11,8 +11,8 @@ const TaskContainer = styled.section`
 `;
 
 const TaskText = styled.p`
-    flex-grow: 1;
-    text-decoration: none;
+  flex-grow: 1;
+  text-decoration: ${({ $completed }) => ($completed ? "line-through" : "none")};
 `;
 
 const RemoveButton = styled.button`
