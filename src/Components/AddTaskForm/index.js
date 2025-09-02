@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Button, FormContainer, Input } from "../AddTaskForm/styles";
-import { addTask } from "../../actions";
+import { addTaks } from "../../state/stasks.slice";
 
 const AddTaskForm = () => {
     const [formTask, setFormTask] = useState('');
@@ -15,7 +15,13 @@ const AddTaskForm = () => {
         e.preventDefault();
         if(formTask.trim() === '') return;
 
-        dispatch(addTask(formTask));
+        const newTask = {
+            id: Date.now(),
+            title:formTask,
+            completed: false,
+        }
+        
+        dispatch(addTaks(newTask));
         setFormTask('');
 
     }
